@@ -19,9 +19,21 @@ def create():
     #  print(sys.argv)
 
     #  get arguments from command line
-    filename = str(sys.argv[1])
-    ext_input = str(sys.argv[3])
-    folder_name = str(sys.argv[2])
+    try:
+        filename = str(sys.argv[1])
+    except Exception:
+        print("You must name your file. Try again")
+        sys.exit()
+
+    try:
+        ext_input = str(sys.argv[2])
+    except Exception:
+        ext_input = text
+
+    try:
+        folder_name = str(sys.argv[3])
+    except Exception:
+        folder_name = "General"
 
     # map extension argument to correct . extension in stored dict
     ext = extensions.get(ext_input)
