@@ -52,7 +52,7 @@ def create():
     else:
         ext = text
         filename = filename+ext
-        print("Unrecognized format '{}'. ".format(ext_input))
+        print("Unrecognized format.")
 
     # check file existence
     if not os.path.isfile("./Notes/{}".format(filename)):  # correct this condition (extensions)
