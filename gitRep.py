@@ -22,8 +22,8 @@ def auto_git():
     python_repo_name = browser.find_element_by_xpath('//*[@id="repository_name"]')
 
     python_repo_name.click()
-    python_repo_name.send_keys("NewReposit")
-    # python_repo_name.sendkeys(sys.argv[1])
+    # python_repo_name.send_keys("NewReposit")
+    python_repo_name.sendkeys(sys.argv[1])
 
     python_create_button = browser.find_element_by_xpath('//*[@id="new_repository"]/div[3]/button')
     python_create_button.submit()

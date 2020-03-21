@@ -14,8 +14,9 @@ function autogit(){
   cd /Users/Leina/Documents/PythonProgramming/NotesAutomation/ || return
 
   script_output=$(/Users/Leina/Documents/PythonProgramming/NotesAutomation/venv/bin/python3 gitRep.py "$1")
-  echo $script_output
+  git add remote origin $script_output
 
+  git push -u origin master
 
 }
 
